@@ -2,6 +2,8 @@ package com.classicmodels.data;
 
 import com.classicmodels.model.Customer;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -14,11 +16,11 @@ public interface CustomerMapper {
     @Select("select customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2," +
             "city, state, postalCode, country, salesRepEmployeeNumber, creditLimit from customers where customerNumber = " +
             "#{customerNumber}")
-    Customer findCustomerByNo(int No);
+    Customer findCustomerByCustomerNumber(int customerNumber);
 
     @Select("select customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2," +
             "city, state, postalCode, country, salesRepEmployeeNumber, creditLimit from customers")
-    List<Customer> findAllCustomers();
+    ArrayList<Customer> findAllCustomers();
 
 }
 
