@@ -4,12 +4,6 @@ import com.classicmodels.model.Customer;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.ArrayList;
-import java.util.List;
-
-
-/**
- * Created by yovaliceroman on 4/11/17.
- */
 
 public interface CustomerMapper {
 
